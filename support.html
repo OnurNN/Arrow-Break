@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support – ArrowBreak</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #4A6CF7;
+      --accent-dark: #3558e0;
+      --bg: #ffffff;
+      --surface: #f7f8fc;
+      --border: #e8eaf0;
+      --text: #1a1d2e;
+      --muted: #6b7280;
+      --radius: 16px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      gap: 16px;
+    }
+
+    .nav-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 4px;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: color 0.15s, background 0.15s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      background: rgba(74,108,247,0.08);
+    }
+
+    /* ── Content pages ── */
+    .page-content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .page-header {
+      margin-bottom: 40px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .page-header .meta {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* ── FAQ ── */
+    .faq-category {
+      margin-bottom: 32px;
+    }
+
+    .faq-category-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .faq-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 16px 20px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.15s;
+    }
+
+    .faq-question:hover {
+      background: rgba(74,108,247,0.04);
+    }
+
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      color: var(--muted);
+      transition: transform 0.2s;
+    }
+
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 20px 16px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .faq-answer ul,
+    .faq-answer ol {
+      padding-left: 18px;
+      margin-top: 6px;
+    }
+
+    .faq-answer li {
+      margin-bottom: 4px;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* ── Contact banner ── */
+    .contact-banner {
+      background: linear-gradient(135deg, #4A6CF7, #6a8bfa);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+      color: #fff;
+      margin-top: 32px;
+    }
+
+    .contact-banner h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-banner p {
+      opacity: 0.9;
+      font-size: 0.9rem;
+      margin-bottom: 18px;
+    }
+
+    .contact-banner a.btn-white {
+      display: inline-block;
+      background: #fff;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 10px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+
+    .contact-banner a.btn-white:hover {
+      transform: translateY(-2px);
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 480px) {
+      .nav-links a {
+        font-size: 0.82rem;
+        padding: 6px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="./">🏹 ArrowBreak</a>
+      <ul class="nav-links">
+        <li><a href="./">Home</a></li>
+        <li><a href="./privacy">Privacy Policy</a></li>
+        <li><a href="./terms">Terms of Service</a></li>
+        <li><a href="./support" class="active">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <div class="page-header">
+      <h1>Support</h1>
+      <p class="meta">App: ArrowBreak &nbsp;·&nbsp; Developer: OnurNN</p>
+    </div>
+
+    <div class="faq-category">
+      <div class="faq-category-title">🎮 Gameplay</div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I unlock new levels?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">Complete the current level to unlock the next one. Each difficulty (Easy, Medium, Hard, Extreme) has its own progress track.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          I completed a level but it shows as locked?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">Try signing in with Apple ID (<strong>Settings → Connect Account</strong>). Your progress syncs via iCloud.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I change the difficulty?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">On the Level Select screen, tap the difficulty tabs at the top (Easy / Medium / Hard / Extreme).</div>
+      </div>
+    </div>
+
+    <div class="faq-category">
+      <div class="faq-category-title">💾 Progress &amp; Account</div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Will I lose my progress if I delete the app?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <ul>
+            <li><strong>Without account:</strong> Progress is stored locally. Deleting the app will erase it.</li>
+            <li><strong>With Apple Sign In:</strong> Progress is backed up to iCloud and can be restored after reinstall.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I reset my progress?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">Go to <strong>Settings → Reset Progress</strong>. This will lock all levels except Level 1.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I delete my account?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">Go to <strong>Settings → Connect Account → Delete Account</strong>. This removes your CloudKit data permanently.</div>
+      </div>
+    </div>
+
+    <div class="faq-category">
+      <div class="faq-category-title">📱 Technical</div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          The app crashes on launch. What should I do?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <ol>
+            <li>Restart your device</li>
+            <li>Make sure iOS is up to date</li>
+            <li>Reinstall the app</li>
+            <li>Contact us if the issue persists</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Ads are not loading.
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">Check your internet connection. If you purchased "Remove Ads", make sure you're signed in with the same Apple ID used for the purchase.</div>
+      </div>
+    </div>
+
+    <div class="contact-banner">
+      <h2>Still need help?</h2>
+      <p>We typically respond within 2 business days.</p>
+      <a href="mailto:contact.arrowbreak@gmail.com" class="btn-white">📧 contact.arrowbreak@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ArrowBreak · <a href="./privacy">Privacy Policy</a> · <a href="./terms">Terms of Service</a> · <a href="mailto:contact.arrowbreak@gmail.com">Contact</a></p>
+  </footer>
+
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
+
+</body>
+</html>
