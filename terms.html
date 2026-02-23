@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service – ArrowBreak</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #4A6CF7;
+      --accent-dark: #3558e0;
+      --bg: #ffffff;
+      --surface: #f7f8fc;
+      --border: #e8eaf0;
+      --text: #1a1d2e;
+      --muted: #6b7280;
+      --radius: 16px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      gap: 16px;
+    }
+
+    .nav-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 4px;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: color 0.15s, background 0.15s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      background: rgba(74,108,247,0.08);
+    }
+
+    /* ── Content pages ── */
+    .page-content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .page-header {
+      margin-bottom: 40px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .page-header .meta {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 36px;
+    }
+
+    .content-card h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 32px 0 12px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+
+    .content-card h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .content-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 20px 0 8px;
+    }
+
+    .content-card p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .content-card ul,
+    .content-card ol {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .content-card li {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .content-card strong {
+      color: var(--text);
+    }
+
+    .content-card a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .content-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 480px) {
+      .nav-links a {
+        font-size: 0.82rem;
+        padding: 6px 8px;
+      }
+      .content-card {
+        padding: 24px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="./">🏹 ArrowBreak</a>
+      <ul class="nav-links">
+        <li><a href="./">Home</a></li>
+        <li><a href="./privacy">Privacy Policy</a></li>
+        <li><a href="./terms" class="active">Terms of Service</a></li>
+        <li><a href="./support">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <div class="page-header">
+      <h1>Terms of Service</h1>
+      <p class="meta">Last updated: July 2025 &nbsp;·&nbsp; App: ArrowBreak &nbsp;·&nbsp; Developer: OnurNN</p>
+    </div>
+    <div class="content-card">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By downloading, installing, or using ArrowBreak ("the app"), you agree to be bound by these Terms of Service. If you do not agree, do not use the app.</p>
+
+      <h2>2. License</h2>
+      <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use ArrowBreak for personal, non-commercial purposes on Apple devices you own or control, subject to these Terms and Apple's App Store Terms of Service.</p>
+
+      <h2>3. User Accounts</h2>
+      <ul>
+        <li>Sign In with Apple is optional. You may play without an account.</li>
+        <li>You are responsible for maintaining the security of your Apple ID.</li>
+        <li>We reserve the right to terminate accounts that violate these Terms.</li>
+      </ul>
+
+      <h2>4. In-App Purchases</h2>
+      <ul>
+        <li>Purchases are processed by Apple and are subject to Apple's Terms of Sale.</li>
+        <li>All purchases are <strong>final and non-refundable</strong> unless required by applicable law.</li>
+        <li>"Remove Ads" is a one-time purchase that removes advertisements permanently for that Apple ID.</li>
+      </ul>
+
+      <h2>5. Prohibited Conduct</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Reverse engineer, decompile, or modify the app</li>
+        <li>Use cheats, bots, or exploits to manipulate game progress</li>
+        <li>Attempt to gain unauthorized access to other users' CloudKit data</li>
+        <li>Use the app for any unlawful purpose</li>
+      </ul>
+
+      <h2>6. Intellectual Property</h2>
+      <p>All content in ArrowBreak — including graphics, game design, sounds, and code — is owned by OnurNN and protected by copyright law. You may not reproduce or distribute any part of the app without written permission.</p>
+
+      <h2>7. Disclaimer of Warranties</h2>
+      <p>ArrowBreak is provided <strong>"as is"</strong> without warranties of any kind. We do not guarantee that the app will be error-free, uninterrupted, or free of bugs.</p>
+
+      <h2>8. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, OnurNN shall not be liable for any indirect, incidental, or consequential damages arising from your use of the app.</p>
+
+      <h2>9. Changes to Terms</h2>
+      <p>We may update these Terms at any time. Continued use of the app after changes constitutes acceptance of the new Terms.</p>
+
+      <h2>10. Governing Law</h2>
+      <p>These Terms are governed by the laws of <strong>Turkey</strong>, without regard to conflict of law principles.</p>
+
+      <h2>11. Contact Us</h2>
+      <p><strong>Email:</strong> <a href="mailto:contact.arrowbreak@gmail.com">contact.arrowbreak@gmail.com</a></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ArrowBreak · <a href="./privacy">Privacy Policy</a> · <a href="./terms">Terms of Service</a> · <a href="mailto:contact.arrowbreak@gmail.com">Contact</a></p>
+  </footer>
+
+</body>
+</html>
