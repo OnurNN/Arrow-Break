@@ -51,7 +51,7 @@ Check your internet connection. If you purchased "Remove Ads", make sure you're 
 
 For bug reports, feedback, or other inquiries:
 
-📧 **Email:** contact.arrowflip@gmail.com
+📧 **Email:** contact.arrowbreak@gmail.com
 
 
 We typically respond within **2 business days**.
