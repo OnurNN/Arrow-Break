@@ -76,4 +76,4 @@ These Terms are governed by the laws of **Turkey**, without regard to conflict o
 
 ## 11. Contact Us
 
-**Email:** contact.arrowflip@gmail.com
+**Email:** contact.arrowbreak@gmail.com
