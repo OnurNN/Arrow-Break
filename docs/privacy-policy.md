@@ -1,14 +1,14 @@
 # Privacy Policy
 
 **Last updated:** July 2025  
-**App:** ArrowBreak  
+**App:** ArrowFlip  
 **Developer:** OnurNN
 
 ---
 
 ## 1. Overview
 
-ArrowBreak ("we", "our", "the app") is a mobile puzzle game available on the Apple App Store. We are committed to protecting your privacy. This Privacy Policy explains what data we collect, how we use it, and your rights.
+ArrowFlip ("we", "our", "the app") is a mobile puzzle game available on the Apple App Store. We are committed to protecting your privacy. This Privacy Policy explains what data we collect, how we use it, and your rights.
 
 ---
 
@@ -31,7 +31,7 @@ ArrowBreak ("we", "our", "the app") is a mobile puzzle game available on the App
 
 ## 3. Advertising
 
-ArrowBreak may display ads powered by **Google AdMob**. AdMob may collect device identifiers (IDFA) for ad personalization, subject to your App Tracking Transparency (ATT) consent on iOS 14+.
+ArrowFlip may display ads powered by **Google AdMob**. AdMob may collect device identifiers (IDFA) for ad personalization, subject to your App Tracking Transparency (ATT) consent on iOS 14+.
 
 - If you opt out of tracking, only non-personalized ads will be shown.
 - AdMob's Privacy Policy: https://policies.google.com/privacy
@@ -40,13 +40,13 @@ ArrowBreak may display ads powered by **Google AdMob**. AdMob may collect device
 
 ## 4. In-App Purchases
 
-ArrowBreak offers optional in-app purchases (e.g., Remove Ads) processed entirely by Apple. We do not store any payment information.
+ArrowFlip offers optional in-app purchases (e.g., Remove Ads) processed entirely by Apple. We do not store any payment information.
 
 ---
 
 ## 5. Children's Privacy
 
-ArrowBreak does not knowingly collect personal information from children under 13. The app is rated 4+ on the App Store and contains no features that require personal data from children.
+ArrowFlip does not knowingly collect personal information from children under 13. The app is rated 4+ on the App Store and contains no features that require personal data from children.
 
 ---
 
@@ -77,4 +77,4 @@ We may update this Privacy Policy from time to time. Changes will be reflected o
 
 If you have any questions about this Privacy Policy, please contact us:
 
-**Email:** contact.arrowbreak@gmail.com
+**Email:** contact.arrowflip@gmail.com

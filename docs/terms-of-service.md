@@ -1,20 +1,20 @@
 # Terms of Service
 
 **Last updated:** July 2025  
-**App:** ArrowBreak  
+**App:** ArrowFlip  
 **Developer:** OnurNN
 
 ---
 
 ## 1. Acceptance of Terms
 
-By downloading, installing, or using ArrowBreak ("the app"), you agree to be bound by these Terms of Service. If you do not agree, do not use the app.
+By downloading, installing, or using ArrowFlip ("the app"), you agree to be bound by these Terms of Service. If you do not agree, do not use the app.
 
 ---
 
 ## 2. License
 
-We grant you a limited, non-exclusive, non-transferable, revocable license to use ArrowBreak for personal, non-commercial purposes on Apple devices you own or control, subject to these Terms and Apple's App Store Terms of Service.
+We grant you a limited, non-exclusive, non-transferable, revocable license to use ArrowFlip for personal, non-commercial purposes on Apple devices you own or control, subject to these Terms and Apple's App Store Terms of Service.
 
 ---
 
@@ -46,13 +46,13 @@ You agree not to:
 
 ## 6. Intellectual Property
 
-All content in ArrowBreak — including graphics, game design, sounds, and code — is owned by OnurNN and protected by copyright law. You may not reproduce or distribute any part of the app without written permission.
+All content in ArrowFlip — including graphics, game design, sounds, and code — is owned by OnurNN and protected by copyright law. You may not reproduce or distribute any part of the app without written permission.
 
 ---
 
 ## 7. Disclaimer of Warranties
 
-ArrowBreak is provided **"as is"** without warranties of any kind. We do not guarantee that the app will be error-free, uninterrupted, or free of bugs.
+ArrowFlip is provided **"as is"** without warranties of any kind. We do not guarantee that the app will be error-free, uninterrupted, or free of bugs.
 
 ---
 
@@ -76,4 +76,4 @@ These Terms are governed by the laws of **Turkey**, without regard to conflict o
 
 ## 11. Contact Us
 
-**Email:** contact.arrowbreak@gmail.com
+**Email:** contact.arrowflip@gmail.com
